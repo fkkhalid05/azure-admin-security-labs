@@ -10,7 +10,7 @@ Implement secure identity and access management using Azure Entra ID.
 - Conditional Access
 
 ## Steps
-1. Created users and security groups
+1. created separate admin and reader users in azure Entra ID to model privileged and low privileged identities
 2. Assigned RBAC roles at resource group scope
 3. Enabled MFA for admin accounts
 4. Tested least privilege access
