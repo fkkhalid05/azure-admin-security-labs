@@ -11,7 +11,7 @@ Implement secure identity and access management using Azure Entra ID.
 
 ## Steps
 1. created separate admin and reader users in azure Entra ID to model privileged and low privileged identities
-2.Created security groups to represent administrator and read-only roles. Users were added to groups so permissions can be managed centrally.
+2. Created security groups to represent administrator and read-only roles. Users were added to groups so permissions can be managed centrally.
 3. Enabled MFA for admin accounts
 4. Tested least privilege access
 
