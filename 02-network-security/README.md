@@ -10,9 +10,9 @@ Design and secure Azure virtual networks using network security controls.
 - Private Endpoints
 
 ## Steps
-1. Created a virtual network with multiple subnets
-2. Applied Network Security Groups to subnets
-3. Defined inbound and outbound security rules
+1. Created a virtual network with multiple subnets :Created a virtual network with segmented subnets to isolate workloads.
+2. Applied Network Security Groups to subnets : Associated a Network Security Group with the web subnet.
+3. Defined inbound and outbound security rules : Implemented inbound NSG rules to allow only required traffic.
 4. Tested traffic flow between subnets
 5. Restricted public access where possible
 
