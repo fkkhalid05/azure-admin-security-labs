@@ -14,7 +14,7 @@ Implement secure identity and access management using Azure Entra ID.
 2. Created security groups to represent administrator and read-only roles. Users were added to groups so permissions can be managed centrally.
 3. Assigned RBAC roles to security groups at resource group scope to enforce least privilege access.
 
-4. Enabled MFA for admin accounts
+4. Enabled MFA for admin accounts: Enforced MFA for privileged admin accounts to reduce the risk of credential compromise.
 5. Tested least privilege access
 
 ## Security Considerations
