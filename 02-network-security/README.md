@@ -1,31 +1,54 @@
 # Network Security Lab
 
 ## Objective
-Design and secure Azure virtual networks using network security controls.
+Design and secure an Azure virtual network using Network Security
+Groups (NSGs) and least-privilege network access controls.
+
+---
 
 ## Architecture
-- Virtual Network (VNET)
-- Subnets
-- Network Security Groups (NSGs)
-- Private Endpoints
+- Virtual Network (VNet)
+- Single subnet (default)
+- Network Security Group (NSG) associated at subnet level
+
+---
 
 ## Steps
-1. Created a virtual network with multiple subnets :Created a virtual network with segmented subnets to isolate workloads.
-2. Applied Network Security Groups to subnets : Associated a Network Security Group with the web subnet.
-3. Defined inbound and outbound security rules : Implemented inbound NSG rules to allow only required traffic.
-4. Tested traffic flow between subnets
-5. Restricted public access where possible
+
+1. Created an Azure Virtual Network with a defined address space
+   and a default subnet.
+
+2. Created a Network Security Group (NSG) in the same resource group
+   and region as the virtual network.
+
+3. Configured inbound NSG rules to allow SSH (TCP 22) access only
+   from a trusted public IP address using CIDR notation (/32).
+
+4. Verified default NSG rules to confirm a secure deny-by-default
+   inbound posture.
+
+5. Associated the NSG with the subnet to enforce network security
+   for all resources deployed within the subnet.
+
+---
 
 ## Security Considerations
-- Implemented least privilege network access
-- Restricted unnecessary inbound ports
-- Segmented workloads using subnets
+- Implemented least-privilege network access
+- Restricted inbound access to a single trusted IP
+- Maintained default deny inbound rules
+- Applied NSG at subnet level for centralized control
+
+---
 
 ## On-Premises Mapping
 - VLANs → Azure Subnets
-- Firewalls → NSGs
-- Network segmentation → Zero Trust networking
+- Firewalls → Network Security Groups
+- Network segmentation → Zero Trust networking principles
+
+---
 
 ## Lessons Learned
-- NSG rule priority is critical
-- Default rules should not be blindly trusted
+- NSG rule priority determines traffic flow
+- Default NSG rules provide a secure baseline
+- NSGs must be associated with a subnet or NIC to be effective
+- Valid CIDR notation is required for NSG rule configuration
